@@ -6,9 +6,9 @@ import {URL_PAGE, URL_USERS} from './constants';
 import App from '../components/App';
 
 export const Root = () => (
-    <Router >
+    <Router>
         <Route exact path={`${URL_USERS}`} component={App}/>
-        <Route exact path={`${URL_USERS}/${URL_PAGE}`} component={App}/>
+        {/*<Route strict path={`${URL_USERS}/${URL_PAGE}`} component={App}/>*/}
         {/*<Route path={`${URL_LIST}/:id${URL_EDIT}`} component={TaskEdit}/>*/}
     </Router>
 );
