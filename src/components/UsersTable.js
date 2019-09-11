@@ -1,6 +1,6 @@
 'use strict';
 
-import React from 'react';
+import React, {useRef} from 'react';
 import {pArrayRequired} from '../constants/index';
 import {UsersTr} from './UsersTr';
 
@@ -17,15 +17,20 @@ const Thead = () => {
 };
 
 export const UsersTable = ({users}) => {
+    const ref = useRef(null);
+
     return (
-        <div>
-            <table className="table table-striped table-bordered ">
+        <div ref={ref}>
+            <table className="table table-striped table-hover table-bordered ">
                 <Thead/>
                 <tbody>
                 {
                     users.map((d, i) => {
                         return (
-                            <UsersTr key={`users-${i}`} user={d}/>
+                            <UsersTr key={`users-${i}`}
+                                     index={i}
+                                     user={d}
+                            />
                         );
                     })
                 }
@@ -36,6 +41,7 @@ export const UsersTable = ({users}) => {
         </div>
     );
 };
+
 UsersTable.propTypes = {
     users: pArrayRequired
 };

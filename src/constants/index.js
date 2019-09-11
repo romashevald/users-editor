@@ -9,4 +9,5 @@ export const pStringRequired = PropTypes.string.isRequired;
 export const pObjectRequired = PropTypes.object.isRequired;
 
 export const STANDARD_PAGE_SIZE = 5;
+export const STANDARD_START_PAGE = 1;
 
