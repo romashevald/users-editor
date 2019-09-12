@@ -3,6 +3,7 @@
 import React from "react";
 
 export const UsersEdit = () => {
+    console.log('=====UsersEdit===');
     return (
         <div className="card" style={{width: "18rem"}}>
             <div className="card-body">
